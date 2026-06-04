@@ -1,0 +1,143 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #060609;
+  --foreground: #eaeaff;
+  --card: #0c0c16;
+  --card-foreground: #eaeaff;
+  --popover: #0c0c16;
+  --popover-foreground: #eaeaff;
+  --primary: #4f75ff;
+  --primary-foreground: #ffffff;
+  --secondary: #12121e;
+  --secondary-foreground: #6060a0;
+  --muted: #0f0f18;
+  --muted-foreground: #505080;
+  --accent: #4f75ff;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(79, 117, 255, 0.1);
+  --input: #0f0f18;
+  --input-background: #0f0f18;
+  --switch-background: #1a1a2e;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: rgba(79, 117, 255, 0.4);
+  --chart-1: #4f75ff;
+  --chart-2: #10b981;
+  --chart-3: #f59e0b;
+  --chart-4: #ec4899;
+  --chart-5: #06b6d4;
+  --radius: 1.25rem;
+  --sidebar: #0c0c16;
+  --sidebar-foreground: #eaeaff;
+  --sidebar-primary: #4f75ff;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #12121e;
+  --sidebar-accent-foreground: #eaeaff;
+  --sidebar-border: rgba(79, 117, 255, 0.1);
+  --sidebar-ring: rgba(79, 117, 255, 0.4);
+}
+
+.dark {
+  --background: #060609;
+  --foreground: #eaeaff;
+  --card: #0c0c16;
+  --card-foreground: #eaeaff;
+  --popover: #0c0c16;
+  --popover-foreground: #eaeaff;
+  --primary: #4f75ff;
+  --primary-foreground: #ffffff;
+  --secondary: #12121e;
+  --secondary-foreground: #6060a0;
+  --muted: #0f0f18;
+  --muted-foreground: #505080;
+  --accent: #4f75ff;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(79, 117, 255, 0.1);
+  --input: #0f0f18;
+  --ring: rgba(79, 117, 255, 0.4);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  html {
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: #060609;
+    color: #eaeaff;
+    font-family: 'Inter', -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+    color: #eaeaff;
+  }
+
+  h1 { font-size: clamp(3.2rem, 8.5vw, 7.5rem); }
+  h2 { font-size: clamp(2rem, 4.5vw, 4rem); }
+  h3 { font-size: 1.2rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.025em; }
+  h4 { font-size: 0.8rem; font-weight: 600; line-height: 1.5; letter-spacing: 0.06em; text-transform: uppercase; }
+
+  p { line-height: 1.75; }
+
+  ::selection { background: rgba(79,117,255,0.28); }
+  ::-webkit-scrollbar { width: 0; }
+}
